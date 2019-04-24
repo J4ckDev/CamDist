@@ -9,4 +9,9 @@
     Public Property PP As Double    'Angulo Phi prima
     'Otras variables
     Public Property DPC As Double   'Distancia para posicionar camara
+    Public Function Deg2Rad(Deg As Double) As Double
+        Dim Radians As Double
+        Radians = Deg * Math.PI / 180
+        Return Radians
+    End Function
 End Class
