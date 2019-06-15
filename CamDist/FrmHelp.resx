@@ -124,10 +124,12 @@ proyección, en la imagen se pueden
 observar los datos que se pueden 
 ingresar cuando se desea cubrir un 
 ancho específico en dicho plano de 
-proyección.
-La cámara se ve desde arriba.
+proyección. En este modo de cálculo,
+la apertura es independiente del alto
+del lente de la cámara.
 
-</value>
+En la imagen se observa la cámara 
+desde arriba.</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>La vista lateral representa el triángulo del alto del plano de 
@@ -135,12 +137,14 @@ proyección, en la imagen se pueden observar los datos que
 se pueden ingresar
 cuando se desea 
 cubrir un alto 
-específicado en 
-dicho plano de 
-proyección.
-La cámara en este 
-modo se ve de lado.
-</value>
+específicado en dicho
+plano de proyección. 
+Entre más grande sea
+el valor de la altura
+del lente, mayor será
+la altura del plano que
+puede cubrir la
+cámara.</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>El plano de proyección representa lo que mostrará la cámara 

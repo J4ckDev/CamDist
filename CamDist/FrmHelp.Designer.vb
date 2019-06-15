@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmHelp
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmHelp
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHelp))
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -33,7 +33,6 @@ Partial Class FrmHelp
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,9 +45,9 @@ Partial Class FrmHelp
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.CamDist.My.Resources.Resources.VistaLateral
-        Me.PictureBox3.Location = New System.Drawing.Point(149, 48)
+        Me.PictureBox3.Location = New System.Drawing.Point(160, 48)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(285, 181)
+        Me.PictureBox3.Size = New System.Drawing.Size(274, 181)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
@@ -58,7 +57,7 @@ Partial Class FrmHelp
         Me.PictureBox2.Image = Global.CamDist.My.Resources.Resources.VistaSuperior
         Me.PictureBox2.Location = New System.Drawing.Point(6, 6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(177, 221)
+        Me.PictureBox2.Size = New System.Drawing.Size(170, 221)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
@@ -88,9 +87,9 @@ Partial Class FrmHelp
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(182, 7)
+        Me.Label3.Location = New System.Drawing.Point(175, 7)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(258, 162)
+        Me.Label3.Size = New System.Drawing.Size(267, 216)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = resources.GetString("Label3.Text")
         '
@@ -109,9 +108,9 @@ Partial Class FrmHelp
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(2, 3)
+        Me.Label2.Location = New System.Drawing.Point(1, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(424, 180)
+        Me.Label2.Size = New System.Drawing.Size(424, 234)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = resources.GetString("Label2.Text")
         '
@@ -141,23 +140,12 @@ Partial Class FrmHelp
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(445, 264)
         Me.TabControl1.TabIndex = 1
-        '
-        'TabPage1
-        '
-        Me.TabPage1.BackColor = System.Drawing.Color.Green
-        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(437, 233)
-        Me.TabPage1.TabIndex = 4
-        Me.TabPage1.Text = "Interfaz"
         '
         'FrmHelp
         '
@@ -202,5 +190,4 @@ Partial Class FrmHelp
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TabPage1 As TabPage
 End Class
