@@ -117,6 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>La vista superior representa el 
+triángulo del ancho del plano de
+proyección, en la imagen se pueden
+observar los datos que se pueden 
+ingresar cuando se desea cubrir un 
+ancho específico en dicho plano de 
+proyección.
+La cámara se ve desde arriba.
+
+</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>La vista lateral representa el triángulo del alto del plano de 
+proyección, en la imagen se pueden observar los datos que 
+se pueden ingresar
+cuando se desea 
+cubrir un alto 
+específicado en 
+dicho plano de 
+proyección.
+La cámara en este 
+modo se ve de lado.
+</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>El plano de proyección representa lo que mostrará la cámara 
+en pantalla, a mayor distancia mayor será el plano que cubrirá
+la cámara. El programa funciona de tal forma que se debe
+ingresar el alto o ancho
+del plano de proyección,
+el alto del lente desde 
+su base y  la cámara 
+que se va a utilizar, para
+obtener la distancia a 
+la que se debe colocar 
+la cámara para cubrir 
+el plano deseado.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -13,4 +13,7 @@
         Close()
     End Sub
 
+    Private Sub BtnHelp_Click(sender As Object, e As EventArgs) Handles BtnHelp.Click
+        FrmHelp.Show()
+    End Sub
 End Class

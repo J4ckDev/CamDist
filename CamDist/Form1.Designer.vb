@@ -27,6 +27,7 @@ Partial Class Main
         Me.CBcam = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.NudAL = New System.Windows.Forms.NumericUpDown()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSplitButton1 = New System.Windows.Forms.ToolStripSplitButton()
         Me.LimpiarCamposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,11 +37,10 @@ Partial Class Main
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnAcercaDe = New System.Windows.Forms.ToolStripButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.NudAL = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ToolStrip1.SuspendLayout()
         CType(Me.NudAL, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'CBcam
@@ -69,12 +69,24 @@ Partial Class Main
         Me.GroupBox2.Size = New System.Drawing.Size(250, 250)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "La vista superior"
+        Me.GroupBox2.Text = "Por vista superior"
         '
         'ToolTip1
         '
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "Ayuda"
+        '
+        'NudAL
+        '
+        Me.NudAL.BackColor = System.Drawing.Color.Green
+        Me.NudAL.DecimalPlaces = 4
+        Me.NudAL.ForeColor = System.Drawing.Color.White
+        Me.NudAL.Location = New System.Drawing.Point(172, 93)
+        Me.NudAL.Name = "NudAL"
+        Me.NudAL.Size = New System.Drawing.Size(91, 26)
+        Me.NudAL.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.NudAL, "Altura desde la base de la " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cámara o del soporte donde" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "se ubica la cámara hasta" &
+        " " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "aproximadamente el centro" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "del lente de la cámara.")
         '
         'ToolStrip1
         '
@@ -94,20 +106,24 @@ Partial Class Main
         Me.ToolStripSplitButton1.Name = "ToolStripSplitButton1"
         Me.ToolStripSplitButton1.Size = New System.Drawing.Size(86, 24)
         Me.ToolStripSplitButton1.Text = "Archivo"
+        Me.ToolStripSplitButton1.ToolTipText = "Opciones del programa"
         '
         'LimpiarCamposToolStripMenuItem
         '
         Me.LimpiarCamposToolStripMenuItem.Image = Global.CamDist.My.Resources.Resources.garbage
         Me.LimpiarCamposToolStripMenuItem.Name = "LimpiarCamposToolStripMenuItem"
-        Me.LimpiarCamposToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
+        Me.LimpiarCamposToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.LimpiarCamposToolStripMenuItem.Text = "Limpiar Campos"
+        Me.LimpiarCamposToolStripMenuItem.ToolTipText = "Elimina el texto escrito en" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "las cajas de texto y reinicia" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "los controles a su es" &
+    "tado " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "inicial."
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Image = Global.CamDist.My.Resources.Resources.close
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.SalirToolStripMenuItem.Text = "Salir"
+        Me.SalirToolStripMenuItem.ToolTipText = "Cierra el programa."
         '
         'ToolStripSeparator1
         '
@@ -121,6 +137,7 @@ Partial Class Main
         Me.BtnHelp.Name = "BtnHelp"
         Me.BtnHelp.Size = New System.Drawing.Size(67, 24)
         Me.BtnHelp.Text = "Ayuda"
+        Me.BtnHelp.ToolTipText = "Información de elementos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "a tener en cuenta."
         '
         'ToolStripSeparator2
         '
@@ -134,6 +151,7 @@ Partial Class Main
         Me.BtnAcercaDe.Name = "BtnAcercaDe"
         Me.BtnAcercaDe.Size = New System.Drawing.Size(91, 24)
         Me.BtnAcercaDe.Text = "Acerca de"
+        Me.BtnAcercaDe.ToolTipText = "Datos sobre el desarrollador" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "y la versión del programa."
         '
         'Label1
         '
@@ -145,18 +163,6 @@ Partial Class Main
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Ingrese la altura o ancho a cubrir, la altura del lente y seleccione una de las " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cámaras disponibles para realizar el cálculo de la distancia para ubicarla."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'NudAL
-        '
-        Me.NudAL.BackColor = System.Drawing.Color.Green
-        Me.NudAL.DecimalPlaces = 4
-        Me.NudAL.ForeColor = System.Drawing.Color.White
-        Me.NudAL.Location = New System.Drawing.Point(172, 93)
-        Me.NudAL.Name = "NudAL"
-        Me.NudAL.Size = New System.Drawing.Size(91, 26)
-        Me.NudAL.TabIndex = 0
-        Me.ToolTip1.SetToolTip(Me.NudAL, "Altura desde la base de la " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cámara o del soporte donde" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "se ubica la cámara hasta" &
-        " " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "aproximadamente el centro" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "del lente de la cámara.")
         '
         'Label2
         '
@@ -179,7 +185,7 @@ Partial Class Main
         Me.GroupBox1.Size = New System.Drawing.Size(250, 250)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "La vista lateral"
+        Me.GroupBox1.Text = "Por vista lateral"
         '
         'Main
         '
@@ -203,9 +209,9 @@ Partial Class Main
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CamDist"
+        CType(Me.NudAL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.NudAL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

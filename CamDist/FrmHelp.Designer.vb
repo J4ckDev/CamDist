@@ -27,9 +27,13 @@ Partial Class FrmHelp
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,9 +46,9 @@ Partial Class FrmHelp
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.CamDist.My.Resources.Resources.VistaLateral
-        Me.PictureBox3.Location = New System.Drawing.Point(6, 6)
+        Me.PictureBox3.Location = New System.Drawing.Point(149, 48)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(240, 219)
+        Me.PictureBox3.Size = New System.Drawing.Size(285, 181)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
@@ -52,9 +56,9 @@ Partial Class FrmHelp
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.CamDist.My.Resources.Resources.VistaSuperior
-        Me.PictureBox2.Location = New System.Drawing.Point(8, 6)
+        Me.PictureBox2.Location = New System.Drawing.Point(6, 6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(213, 221)
+        Me.PictureBox2.Size = New System.Drawing.Size(177, 221)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
@@ -62,9 +66,9 @@ Partial Class FrmHelp
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CamDist.My.Resources.Resources.PLanoPro
-        Me.PictureBox1.Location = New System.Drawing.Point(7, 7)
+        Me.PictureBox1.Location = New System.Drawing.Point(175, 63)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(241, 218)
+        Me.PictureBox1.Size = New System.Drawing.Size(256, 162)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -73,6 +77,7 @@ Partial Class FrmHelp
         '
         Me.TabPage4.BackColor = System.Drawing.Color.Green
         Me.TabPage4.Controls.Add(Me.PictureBox2)
+        Me.TabPage4.Controls.Add(Me.Label3)
         Me.TabPage4.Location = New System.Drawing.Point(4, 27)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -80,10 +85,20 @@ Partial Class FrmHelp
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Vista Superior"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(182, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(258, 162)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = resources.GetString("Label3.Text")
+        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.Green
         Me.TabPage3.Controls.Add(Me.PictureBox3)
+        Me.TabPage3.Controls.Add(Me.Label2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 27)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -91,10 +106,20 @@ Partial Class FrmHelp
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Vista Lateral"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(2, 3)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(424, 180)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = resources.GetString("Label2.Text")
+        '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.Green
         Me.TabPage2.Controls.Add(Me.PictureBox1)
+        Me.TabPage2.Controls.Add(Me.Label1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 27)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -102,17 +127,37 @@ Partial Class FrmHelp
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Plano de Proyección"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(2, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(436, 216)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = resources.GetString("Label1.Text")
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(445, 264)
         Me.TabControl1.TabIndex = 1
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.Green
+        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(437, 233)
+        Me.TabPage1.TabIndex = 4
+        Me.TabPage1.Text = "Interfaz"
         '
         'FrmHelp
         '
@@ -137,8 +182,11 @@ Partial Class FrmHelp
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -151,4 +199,8 @@ Partial Class FrmHelp
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TabPage1 As TabPage
 End Class
