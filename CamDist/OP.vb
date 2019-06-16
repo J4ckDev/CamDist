@@ -9,6 +9,8 @@
     Public Property PP As Double    'Angulo Phi prima
     'Otras variables
     Public Property Dis As Double   'Distancia para posicionar camara
+    Public Property Ancho As Double 'Ancho por cálculo de la altura
+    Public Property Alto As Double 'Alto por cálculo del ancho
     Public Function Deg2Rad(Deg As Double) As Double
         Dim Radians As Double
         Radians = Deg * Math.PI / 180
@@ -55,7 +57,7 @@
         Dim Altmax As Decimal
         Dim DisMax As Decimal
         If vlente = 0 Then
-            Dis = valto * Math.Tan(Deg2Rad(PV))
+            Dis = Math.Round(valto * Math.Tan(Deg2Rad(PV)), 4)
         Else
             DisMax = Math.Round(vlente * Math.Tan(Deg2Rad(PP)), 4)
             Dim temp As Decimal
@@ -78,10 +80,50 @@
         Return Math.Round(Dis, 4)
     End Function
 
-    Public Function CDdistAlt() As Decimal
-
+    Public Function CDdistAlt(Dist As Decimal, vlente As Decimal, CBcam As ComboBox) As Decimal
+        Select Case CBcam.Text
+            Case "Unitec"
+                TV = 16.399
+                PV = 73.601
+                TP = 6.967
+                PP = 83.033
+            Case "Genius"
+                TV = 17.8189
+                PV = 72.1811
+                TP = 16.8868
+                PP = 73.1132
+            Case Else
+                TV = 0
+                PV = 0
+                TP = 0
+                PP = 0
+        End Select
+        Dim DisMax As Decimal
+        If vlente = 0 Then
+            Alto = Math.Round(Dist * Math.Tan(Deg2Rad(TV)), 4)
+        Else
+            DisMax = Math.Round(vlente * Math.Tan(Deg2Rad(PP)), 4)
+            If Dist <= DisMax Then
+                Alto = Math.Round(Dist * Math.Tan(Deg2Rad(TV)) + vlente, 4)
+            Else
+                Alto = Math.Round((Dist * Math.Tan(Deg2Rad(TV))) + (Dist * Math.Tan(Deg2Rad(TP))), 4)
+            End If
+        End If
+        Return Math.Round(Alto, 4)
     End Function
-    Public Function CDdistAn() As Decimal
-
+    Public Function CDdistAn(Dist As Decimal, CBcam As ComboBox) As Decimal
+        Select Case CBcam.Text
+            Case "Unitec"
+                TH = 15.0475
+                PH = 74.9525
+            Case "Genius"
+                TH = 23.0544
+                PH = 66.9456
+            Case Else
+                TH = 0
+                PH = 0
+        End Select
+        Ancho = Math.Round(Dist * Math.Tan(Deg2Rad(TH)), 4)
+        Return Math.Round(Ancho * 2, 4)
     End Function
 End Class

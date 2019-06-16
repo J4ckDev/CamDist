@@ -31,9 +31,11 @@
 
     Private Sub NudAn_ValueChanged(sender As Object, e As EventArgs) Handles NudAn.ValueChanged
         NudDist.Value = iOP.CDAncho(NudAn.Value, CBcam)
+        NudAl.Value = iOP.CDdistAlt(NudDist.Value, NudALL.Value, CBcam)
     End Sub
 
     Private Sub NudAl_ValueChanged(sender As Object, e As EventArgs) Handles NudAl.ValueChanged
         NudDist.Value = iOP.CDAlto(NudAl.Value, NudALL.Value, CBcam)
+        NudAn.Value = iOP.CDdistAn(NudDist.Value, CBcam)
     End Sub
 End Class
