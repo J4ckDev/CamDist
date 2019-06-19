@@ -17,25 +17,21 @@
         FrmHelp.Show()
     End Sub
 
-    Private Sub NudALL_ValueChanged(sender As Object, e As EventArgs) Handles NudALL.ValueChanged
-
-    End Sub
-
-    Private Sub CBcam_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBcam.SelectedIndexChanged
-
-    End Sub
-
     Private Sub LimpiarCamposToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarCamposToolStripMenuItem.Click
         NudAl.Value = 0 : NudALL.Value = 0 : NudAn.Value = 0 : NudDist.Value = 0 : CBcam.Text = "Seleccione una cámara"
     End Sub
 
     Private Sub NudAn_ValueChanged(sender As Object, e As EventArgs) Handles NudAn.ValueChanged
-        NudDist.Value = iOP.CDAncho(NudAn.Value, CBcam)
-        NudAl.Value = iOP.CDdistAlt(NudDist.Value, NudALL.Value, CBcam)
+        If NudAn.Focused Then
+            NudDist.Value = iOP.CDAncho(NudAn.Value, CBcam)
+            NudAl.Value = iOP.CDdistAlt(NudDist.Value, NudALL.Value, CBcam)
+        End If
     End Sub
 
     Private Sub NudAl_ValueChanged(sender As Object, e As EventArgs) Handles NudAl.ValueChanged
-        NudDist.Value = iOP.CDAlto(NudAl.Value, NudALL.Value, CBcam)
-        NudAn.Value = iOP.CDdistAn(NudDist.Value, CBcam)
+        If NudAl.Focused Then
+            NudDist.Value = iOP.CDAlto(NudAl.Value, NudALL.Value, CBcam)
+            NudAn.Value = iOP.CDdistAn(NudDist.Value, CBcam)
+        End If
     End Sub
 End Class
